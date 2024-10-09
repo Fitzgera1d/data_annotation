@@ -1,0 +1,20 @@
+# @package _global_
+
+hydra:
+  run:
+    dir: ./outputs/hydra/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+
+datasets_path: ./datasets
+outputs: ./outputs
+pair_path: ./pairs
+dataset_name: sim_city
+scene_name: city
+
+scene_path: ${datasets_path}/${dataset_name}/${scene_name}
+output_path: ${outputs}/${dataset_name}/${scene_name}
+
+retrieval_conf: netvlad
+pair_num: 20
+
+match_num: 20
